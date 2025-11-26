@@ -4,13 +4,13 @@
 TRACKER_FILE=".progress_tracker"
 
 # Initialize tracker if doesn't exist
-if [[ ! -f "$TRACKER_FILE" ]]; then
-    echo "0" > "$TRACKER_FILE"  # Start from day 0
+if [[ ! -f "solutions/$TRACKER_FILE" ]]; then
+    echo "0" > "solutions/$TRACKER_FILE"  # Start from day 0
     echo "📅 Starting journey: Week 0, Day 1"
 fi
 
 # Read current day count
-TOTAL_DAYS=$(cat "$TRACKER_FILE")
+TOTAL_DAYS=$(cat "solutions/$TRACKER_FILE")
 
 # Calculate week and day
 WEEK=$((TOTAL_DAYS / 7))
