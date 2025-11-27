@@ -1,20 +1,20 @@
 #!/bin/bash
-# Daily workspace setup script with custom week/day tracking
+# Daily workspace setup script with fixed start date
 
-TRACKER_FILE=".progress_tracker"
+# Fixed start date: November 25, 2024 (Week 0, Day 1)
+START_DATE="2025-11-25"
 
-# Initialize tracker if doesn't exist
-if [[ ! -f "solutions/$TRACKER_FILE" ]]; then
-    echo "0" > "solutions/$TRACKER_FILE"  # Start from day 0
-    echo "📅 Starting journey: Week 0, Day 1"
-fi
+# Get current date
+CURRENT_DATE=$(date +%Y-%m-%d)
+echo "current date: $CURRENT_DATE"
 
-# Read current day count
-TOTAL_DAYS=$(cat "solutions/$TRACKER_FILE")
+# Calculate days elapsed since start
+DAYS_ELAPSED=$(( ($(date -d "$CURRENT_DATE" +%s) - $(date -d "$START_DATE" +%s)) / 86400 ))
+echo "days elapsed $DAYS_ELAPSED"
 
 # Calculate week and day
-WEEK=$((TOTAL_DAYS / 7))
-DAY=$((TOTAL_DAYS % 7 + 1))
+WEEK=$((DAYS_ELAPSED / 7))
+DAY=$((DAYS_ELAPSED % 7 + 1))
 
 WORKSPACE="solutions/week-$WEEK/day-$DAY"
 
@@ -27,7 +27,10 @@ touch problem1.py problem2.py notes.md
 
 # Add template to notes.md
 cat > notes.md << NOTES
-# Week $WEEK - Day $DAY (Total: Day $((TOTAL_DAYS + 1)))
+# Week $WEEK - Day $DAY
+
+Date: $(date +%B\ %d,\ %Y)
+Days since start: $((DAYS_ELAPSED + 1))
 
 ## Problems
 1.
@@ -43,9 +46,7 @@ cat > notes.md << NOTES
 - Problem 2:
 NOTES
 
-# Increment tracker for next time
-echo $((TOTAL_DAYS + 1)) > "../../$TRACKER_FILE"
-
 echo "✓ Workspace ready: $WORKSPACE"
-echo "📊 Progress: Week $WEEK, Day $DAY (Total: $((TOTAL_DAYS + 1)) days)"
+echo "📊 Progress: Week $WEEK, Day $DAY (Day $((DAYS_ELAPSED + 1)) of journey)"
+echo "📅 Start date: $START_DATE | Today: $CURRENT_DATE"
 pwd
