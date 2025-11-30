@@ -53,7 +53,7 @@ We will come from the brute force approach, what we do in brute force. We will f
 
 making this some smartness over here, instead of looping for each element of i pair with each element of j from starting, consider first and last pointers that pointed to first and last elements in the array.
 so that they are compared and the two pointers are moved in such way that they contain most water.
-consider the situation, if the height of left is greater that right, the more water can stored with higher height, so we move right pointer inward to compensate the width.
+consider the situation, if the height of left is greater that right, the more water can stored with higher height, so we move right pointer inward to compensate the width. As we are finding maximum so we concentrate on what matters.
 
 so the pattern looks like this,
 first and last at 0, n-1
