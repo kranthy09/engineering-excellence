@@ -60,6 +60,19 @@ first and last at 0, n-1
 compares the height for first, last and one pointer moves inward.
 until the left pointer is smaller than right.
 
+#### Problem 2:
+
+Trapping rain water.
+
+How the problem is deduced to two pointers?
+Trapping rain water involves two walls to have the water contain in it.
+So by moving two pointers we can find the water trapped inside any region.
+
+We can find containers of walls at two indexes, but we it is difficult to find the amount of water it can be stored as it water height is decided by adjacent walls also.
+
+from this, for every pole, we calculate the water that can be trapped inside it.
+For every pole two pointers are moved out such that they find the container belongs to the pole, in which the height of the pole can be accumulated with the heights of the poles it forms containers.
+
 ### New Concepts
 
 -one pointer is moved with a condition, inward up to they both cross each other.
@@ -69,6 +82,52 @@ until the left pointer is smaller than right.
 ### Debugging Insights
 
 - print statements with clear on paper debugging helps to understand the code for improvements.
+
+#### Problem 2:
+
+Trapping rain water.
+
+How the problem is deduced to two pointers?
+Trapping rain water involves two walls to have the water contain in it.
+So by moving two pointers we can find the water trapped inside any region.
+
+We can find containers of walls at two indexes, but we it is difficult to find the amount of water it can be stored as it water height is decided by adjacent walls also.
+
+from this, for every pole, we calculate the water that can be trapped inside it.
+For every pole two pointers are moved out such that they find the container belongs to the pole, in which the height of the pole can be accumulated with the heights of the poles it forms containers.
+
+### New Concepts
+
+- The two pointers are moved outwards to calculate the first maximum from both ends.
+
+- Everything comes from visualization, if we can visualize the problem into runnable animation inside the brain do it with clean thought on paper, so improve problem understanding, we have to identify solution by visualizing the given problem's pattern.
+
+#### Problem 3:
+
+Remove Duplicates from Sorted Array II (Medium), in-place
+
+- in-place: should not create extra space, use given array to swap or assign the elements
+
+Here there are two pointers, slow and fast, slow pointer points to index that should be present and fast pointer points to the element. so every time the slow pointer check two(k) places behind such that for every element two uniques are allowed and remaining replaced with next.
+
+#### Problem 4:
+
+Sort Colors (Medium)
+
+- Pointers acts as partitions such that each pointer has values present of same kind.
+  Here low poiter indicates the values below it all are 0's, high indicates, values above it all are 2's so that the partition of the elements can be made.
+  Now a current element is traversed and checks the current element should belong to, by comparing with low and high, and swapping them to create a partition and move low and high pointers.
+
+#### Problem 5:
+
+Longest Substring Without Repeating Characters (Medium)
+
+- Two pointers first and last are moved in such way that substring contains all unique chars.
+  intially add the elements into charset(set) with last pointer, then at each time before appending to charset check it the char exists in the charset if the charset exists loop over through the elements in the charset, remove left pointer value from the charset move left foward, until the duplicate is removed from the left preserving the length between duplicates.
+
+### Debugging Insights
+
+- print statements with clear names on paper debugging helps to understand the code for improvements.
 
 ## Communication Improvements
 
