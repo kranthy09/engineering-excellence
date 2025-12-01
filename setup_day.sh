@@ -1,8 +1,8 @@
 #!/bin/bash
 # Daily workspace setup script with fixed start date
 
-# Fixed start date: November 25, 2024 (Week 0, Day 1)
-START_DATE="2025-11-25"
+# Fixed start date: November 25, 2025 (Week 0, Day 1)
+START_DATE="2025-11-24"
 
 # Get current date
 CURRENT_DATE=$(date +%Y-%m-%d)
