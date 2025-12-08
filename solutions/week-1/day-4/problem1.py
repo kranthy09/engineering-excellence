@@ -1,5 +1,5 @@
 """
-Two Pointers (forward-backward traversal)
+Minimum Window Subsequence (forward-backward traversal)
 
 Given strings s and t, find the minimum window in s which contains all
 characters of t in the same order (subsequence, not substring).
