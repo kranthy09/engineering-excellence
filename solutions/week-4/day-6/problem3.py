@@ -1,5 +1,9 @@
 # Count digits 1 to N
 
+# TC: O(log(N))
+# SC: O(log(N))
+# series: 9 * 1 + 9 * 2 * 10^1 + 9 * 3 * 10^2 + ...
+# Last number 9*n*pow(10, n-1), where n = number of digits in N.
 def count_digits_1_to_n(N):
     n = 1
     i = 1
@@ -20,5 +24,5 @@ def count_digits_1_to_n(N):
 #
 
 
-res = count_digits_1_to_n(1121)
-print(res)
+ans = count_digits_1_to_n(1121)
+print(ans)
