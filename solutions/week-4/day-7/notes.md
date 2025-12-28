@@ -13,6 +13,7 @@ Days since start: 35
 6. power of 2
 7. \*Count set bits in a number.
 8. Single Number
+9. Single Number - II.
 
 ### Bit Magic
 
