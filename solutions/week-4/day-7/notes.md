@@ -6,7 +6,7 @@ Days since start: 35
 ## Problems
 
 1. Prime Number
-2. \*Sieve of Eratosthenes
+2. Sieve of Eratosthenes
 3. set the kth bit
 4. \*unset the kth bit
 5. Toggle kth bit
