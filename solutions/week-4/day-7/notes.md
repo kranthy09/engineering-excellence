@@ -8,12 +8,12 @@ Days since start: 35
 1. Prime Number
 2. Sieve of Eratosthenes
 3. set the kth bit
-4. \*unset the kth bit
-5. Toggle kth bit
-6. power of 2
+4. unset the kth bit
+5. \*Toggle kth bit
+6. \*power of 2
 7. \*Count set bits in a number.
-8. Single Number
-9. Single Number - II.
+8. \*Single Number
+9. \*Single Number - II.
 
 ### Bit Magic
 
