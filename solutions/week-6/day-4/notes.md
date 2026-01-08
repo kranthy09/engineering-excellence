@@ -80,6 +80,8 @@ class Solution:
 
 #### 2. Binomial Coefficient
 
+#### 3. Multiply Two Strings
+
 ### Pattern:
 
 - Mathematically compute powers and divisions by reducing computations with a common or basic factor while performing calculations.
@@ -93,5 +95,14 @@ class Solution:
 
 - Problem 1: 2hr
 - Problem 2: 2hr
+- problem 3: 1hr
+
+### Steps to Concrete Practice
+
+- There are more than 4 methods to solve power of numbers problem, solve them all with explanation written.
+- Combinations have flaws in direct multiplication, explain it with gcd solution one after the other.
+- Multiplication of two strings, needs to be done in O(n\*m), solve in the naive approach instead of self.convert method.
+
+### By doing above concrete steps, today will be done.
 
 _note_:\*key-problems: sekarana of striken or must known problems.\*practiced-problems: solved problems in the day.\*problem\_.py: all problems solutions
