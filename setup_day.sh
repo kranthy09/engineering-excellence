@@ -32,18 +32,39 @@ cat > notes.md << NOTES
 Date: $(date +%B\ %d,\ %Y)
 Days since start: $((DAYS_ELAPSED + 1))
 
-## Problems
-1.
-2.
+## Notes
 
-## Pattern:
+## Key Problems
 
+### 1.
+### Statement
+### Key Idea:
+```python
+
+```
+### 1.
+### Statement
+### Key Idea:
+```python
+
+```
+## Practiced Problems
+
+### 1.
+### 2.
+
+### Pattern:
+-
 ## Key Learnings
+
 -
 
 ## Time Spent
+
 - Problem 1:
 - Problem 2:
+
+_note_:\*key-problems: sekarana of striken or must known problems.\*practiced-problems: solved problems in the day.\*problem\_.py: all problems solutions
 NOTES
 
 echo "✓ Workspace ready: $WORKSPACE"
