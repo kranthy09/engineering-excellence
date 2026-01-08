@@ -17,6 +17,12 @@ Days since start: 35
 
 ### Bit Magic
 
+
+
+
+
+Algorithm can scale into two ways, vertiically, the behaviour of solution is defined by following certain steps, or it can scale horizantally, it involves in finding the pattern of progressive nature of the problem inputs. Idea is here when an integer is seen in an part of the algorithm, it can be also be considered as bit representation, which is actual representation of an integer is stored with 32 0's or 1's, also called as 32 bits.
+
 ## Pattern:
 
 ## Key Learnings
@@ -24,6 +30,3 @@ Days since start: 35
 -
 
 ## Time Spent
-
-- Problem 1:
-- Problem 2:
