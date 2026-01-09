@@ -20,10 +20,11 @@ space O(1).
 Problems come across searching can be solved using three ways, namely,
 linear search, like above, binary search and hash map approach
 
-Consider binary search approach, to find the smallest missing number, if we can
-sort the array and search from 1 till we get the number. Here sorting takes
-O(nlogn), and searching through n elements requires n * log(n) as binary search takes,
-log(n) operations to search, leads to O(nlogn), and auxillary space O(1).
+Consider binary search approach, to find the smallest missing number, if we
+can sort the array and search from 1 till we get the number. Here sorting takes
+O(nlogn), and searching through n elements requires n * log(n) as binary search
+takes, log(n) operations to search, leads to O(nlogn), and auxillary space
+O(1).
 
 Is there any better way to do it?, yes, with hashmap.
 Hashmap's set and get are O(1), constant operations, we can construct a hashmap
