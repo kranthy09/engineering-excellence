@@ -99,8 +99,8 @@ class Solution:
 
 ### Steps to Concrete Practice
 
-- There are more than 4 methods to solve power of numbers problem, solve them all with explanation written.
-- Combinations have flaws in direct multiplication, explain it with gcd solution one after the other.
+- There are more than 2 methods to solve power of numbers problem, solve them all with explanation written.
+- Combinations have flaws in direct multiplication, explain it with gcd solution one after the other and this problem has more than 4 methods to solve.
 - Multiplication of two strings, needs to be done in O(n\*m), solve in the naive approach instead of self.convert method.
 
 ### By doing above concrete steps, today will be done.

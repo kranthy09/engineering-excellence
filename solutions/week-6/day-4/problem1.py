@@ -1,13 +1,21 @@
-def binomial_optimized(n, r):
-    if r > n or r < 0:
-        return 0
-    r = min(r, n - r)  # Use symmetry: C(n,r) = C(n,n-r)
-
-    result = 1
-    for i in range(r):
-        result = result * (n - i) // (i + 1)
-        print(f"i={i}: result = {result}")  # Debug trace
-    return result
-
-
-print(binomial_optimized(98, 87))
+class Solution:
+    def reverseexponentiation(self, n):
+        # code here
+        # result = 1
+        # for i in range(rev):
+        #     result *= n
+        # return result
+        base = n
+        exp = 0
+        n1 = n
+        while n1:
+            exp = exp*10 + n1 % 10
+            n1 //= 10
+        result = 1
+        while exp > 0:
+            if exp % 2 != 0:
+                result *= base
+            base = (base * base)
+            exp >>= 1
+        return result
+    
