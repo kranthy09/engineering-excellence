@@ -1,27 +1,40 @@
 """
-Logest substring with unique characters
+Longest substring with unique characters
 """
 
 
 class Solution:
 
-    def brute_force(self, arr):
+    def brute_force(self, *args, **kwargs):
         pass
 
-    def expected_approach(self, arr):
+    def expected_approach(self, *args, **kwargs):
         """
         TC:
         SC:
         """
-        n = len(arr)
+        s = args[0]
         left = 0
         right = 0
-        hashset = {arr[left]: 1}
-        while right < n:
-            
+        visited = {s[left]: 1}
+        maxx = 0
+        while right < len(s):
+            if visited.get(s[right]):
+                maxx = max(maxx, right - left)
+                while left <= right:
+                    if s[left] == s[right]:
+                        visited = {s[left]: 1}
+                        left += 1
+                        right += 1
+                        break
+                    left += 1
+            else:
+                visited[s[right]] = 1
+                right += 1
+        return maxx
 
 
 if __name__ == "__main__":
-    arr = []
+    string = "geeksforgeeks"
     ans = Solution()
-    print(ans.expected_approach(arr))
+    print(ans.expected_approach(string))

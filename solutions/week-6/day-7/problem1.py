@@ -1,5 +1,5 @@
 """
-getDistinct in array
+Remove Duplicates from sorted array
 """
 
 
@@ -13,19 +13,27 @@ class Solution:
         TC:
         SC:
         """
-        n = len(arr)
-        i = 0
-        j = 0
-        while i < n:
-            arr[j] = arr[i]
-            j += 1
-            i += 1
-            while i < n and (arr[i] == arr[i-1]):
-                i += 1
-        return j
+        # responsible for telling the position of unique element
+        unique_pos = 1
+        # responsible for fetching unique elements
+        current_ele = 1
+        hmap = {arr[0]: 1}
+        while current_ele < len(arr):
+            if hmap.get(arr[current_ele]):
+                current_ele += 1
+            else:
+                arr[unique_pos] = arr[current_ele]
+                hmap[arr[current_ele]] = 1
+                unique_pos += 1
+                current_ele += 1
+        return arr[:unique_pos]
 
 
 if __name__ == "__main__":
-    arr = []
+    arrs = [[1, 1, 2, 2, 3, 3, 4, 4, 5, 5],
+            [1, 2, 2, 2, 3, 3, 4, 4, 4, 9, 9, 10],
+            [2, 2, 2, 2]
+            ]
     ans = Solution()
-    print(ans.expected_approach(arr))
+    for arr in arrs:
+        print(ans.expected_approach(arr))
