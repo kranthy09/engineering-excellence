@@ -25,6 +25,63 @@ cd "$WORKSPACE" || exit
 # Create files
 touch problem1.py problem2.py notes.md
 
+cat > problem1.py << FIRSTPROBLEM
+"""
+statement
+
+i/o:
+o/p:
+
+i/o:
+o/p:
+"""
+
+
+class Solution:
+    def brute_force(self, *args, **kwargs):
+        pass
+
+    def expected_solution(self, *args, **kwargs):
+        pass
+
+
+if __name__ == "__main__":
+    arr = []
+    ans = Solution()
+
+    print(ans.brute_force(arr))
+    print(ans.expected_solution(arr))
+
+FIRSTPROBLEM
+
+cat > problem1.py << SECONDPROBLEM
+"""
+statement
+
+i/o:
+o/p:
+
+i/o:
+o/p:
+"""
+
+
+class Solution:
+    def brute_force(self, *args, **kwargs):
+        pass
+
+    def expected_solution(self, *args, **kwargs):
+        pass
+
+
+if __name__ == "__main__":
+    arr = []
+    ans = Solution()
+
+    print(ans.brute_force(arr))
+    print(ans.expected_solution(arr))
+SECONDPROBLEM
+
 # Add template to notes.md
 cat > notes.md << NOTES
 # Week $WEEK - Day $DAY
@@ -39,13 +96,12 @@ Days since start: $((DAYS_ELAPSED + 1))
 ### 1.
 ### Statement
 ### Key Idea:
-```python
-
+```
 ```
 ### 1.
 ### Statement
 ### Key Idea:
-```python
+```
 
 ```
 ## Practiced Problems
