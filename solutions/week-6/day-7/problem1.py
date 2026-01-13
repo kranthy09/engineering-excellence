@@ -1,12 +1,42 @@
 """
 Remove Duplicates from sorted array
+Given a sorted array A consisting of duplicate elements.
+Your task is to remove all distinct elements present in A.
+But instead of returning an answer array, you have to rearrange
+the given array in-place such that what have been described above.
+Hence, return a single integer, the index(1-based) till which
+the answer array would reside in the given array A.
+
+
+i/o: [1, 1, 2]
+o/p: 2
+
+i/o: [1, 1, 2, 2, 3, 3, 3]
+o/p: 3
 """
 
 
 class Solution:
 
     def brute_force(self, arr):
-        pass
+        """
+        for each element in the array find its duplicate
+        in the remaining arr, is there no duplicate, increase
+        unique count.
+
+        TC: O(n^2)
+        AS: O(n)
+        """
+        count = 0
+        for i in range(len(arr)):
+            occurence = 0
+            for j in range(i, len(arr)):
+                if arr[i] == arr[j]:
+                    occurence += 1
+            if occurence == 1:
+                count += 1
+
+        return count
 
     def expected_approach(self, arr):
         """
@@ -26,7 +56,7 @@ class Solution:
                 hmap[arr[current_ele]] = 1
                 unique_pos += 1
                 current_ele += 1
-        return arr[:unique_pos]
+        return unique_pos
 
 
 if __name__ == "__main__":
@@ -35,5 +65,11 @@ if __name__ == "__main__":
             [2, 2, 2, 2]
             ]
     ans = Solution()
+
+    print("*****Brute Force*****")
+    for arr in arrs:
+        print(ans.brute_force(arr))
+
+    print("*****Expected Approach*****")
     for arr in arrs:
         print(ans.expected_approach(arr))
