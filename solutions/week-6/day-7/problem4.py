@@ -44,6 +44,8 @@ class Solution:
         seen = {}
         for i in range(n):
             prefix += arr[i]
+            if prefix == k:
+                count += 1
             if seen.get(prefix-k):
                 count += seen[prefix-k]
                 seen[prefix-k] += 1
