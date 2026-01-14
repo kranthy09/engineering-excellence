@@ -41,12 +41,14 @@ class Solution:
         n = len(arr)
         prefix = 0
         count = 0
-        seen = {k: 1}
+        seen = {}
         for i in range(n):
             prefix += arr[i]
-            if seen.get(k - prefix):
-                count += seen[k-prefix]
-            seen[k-prefix] = 1
+            if seen.get(prefix-k):
+                count += seen[prefix-k]
+                seen[prefix-k] += 1
+            else:
+                seen[prefix] = 1
         return count
 
 
