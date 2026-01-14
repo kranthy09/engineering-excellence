@@ -35,8 +35,10 @@ class Solution:
         find prefix sum reduced from target in hashmap,
         to form a subarray sum equals to target.
 
-        TC:
-        SC:
+        Know, why prefix-k is checked in hashmap and later prefix is added.
+
+        TC: O(n)
+        SC: O(n)
         """
         n = len(arr)
         prefix = 0
@@ -48,9 +50,7 @@ class Solution:
                 count += 1
             if seen.get(prefix-k):
                 count += seen[prefix-k]
-                seen[prefix-k] += 1
-            else:
-                seen[prefix] = 1
+            seen[prefix] = seen.get(prefix, 0) + 1
         return count
 
 
@@ -58,7 +58,7 @@ if __name__ == "__main__":
     arrs = [
         [[9, 4, 20, 3, 10, 5], 33],
         [[1, 3, 5], 2],
-        [10, 2, -2, -20, 10],
+        [[10, 2, -2, -20, 10], -10],
     ]
     ans = Solution()
     print("*****Brute Force*****")
