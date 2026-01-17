@@ -10,28 +10,33 @@ class Solution:
 
     def expected_approach(self, *args, **kwargs):
         """
+        Two pointers i, j at start of the arr, j traverse through elements
+        in arr, i represent the starting of the subarray, maintain hashmap
+        for characters seen while traversing, if the character(arr[j])
+        already exists, shrint i, to eleminate the repetion found.
 
-        TC:
-        SC:
+        Capture the substring length.
+
+        TC: O(n)
+        SC: O(1)
         """
-        s = args[0]
-        left = 0
-        right = 0
-        visited = {}
-        maxx = 0
-        while right < len(s):
-            # print(visited)
-            if visited.get(s[right]):
-                maxx = max(maxx, right - left)
-                # print(maxx)
-                # print()
-                while visited.get(s[right]):
-                    visited[s[left]] -= 1
-                    left += 1
+        arr = args[0]
+        n = len(arr)
+        isPresent = [False] * 26
+        i = 0
+        j = 0
+        result = 0
+        while j < n:
+            if not isPresent[ord(arr[j]) - ord("a")]:
+                isPresent[ord(arr[j]) - ord("a")] = True
+                result = max(result, j - i + 1)
             else:
-                visited[s[right]] = 1
-                right += 1
-        return maxx
+                while s[i] != s[j]:
+                    isPresent[ord(arr[i]) - ord("a")] = False
+                    i += 1
+                i += 1
+            j += 1
+        return result
 
 
 if __name__ == "__main__":

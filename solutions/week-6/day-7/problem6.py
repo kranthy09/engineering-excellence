@@ -20,23 +20,59 @@ class Solution:
         and create a hashmap with converted string as key
         to track the indexes to group
 
-        TC:O(n*maxx)
-        SC:O(unique(n))
-        """
+        TC:O(n*m)
+        AS:O(n)
 
+        # TODO:
+        # Create a map of {string, [list of indices]} and use them
+        # to create the output. AS should be optimsed from O(nm) to
+        # O(n)
+        """
         arr = args[0]
+        n = len(arr)
         hmap = {}
-        # convert
-        for i in range(len(arr)):
-            inte = 1
-            for j in range(len(arr[i])):
-                inte = inte << (ord(arr[i][j]) - ord('a'))
-            print(inte, arr[i])
-            if hmap.get(inte):
-                hmap[inte].append(arr[i])
+        for i in range(n):
+            key = self.get_hash_key(arr[i])
+            if hmap.get(key):
+                hmap[key].append(arr[i])
             else:
-                hmap[inte] = [arr[i]]
+                hmap[key] = [arr[i]]
         return [val for val in hmap.values()]
+
+    def get_hash_key(self, subs):
+        """
+        Get hash for a string
+        """
+        repre = [0] * 26
+        for i in range(len(subs)):
+            repre[ord(subs[i]) - ord("a")] += 1
+        key = ""
+        for i in range(26):
+            key += str(repre[i]) + "#"  # unique by delimiter
+        return key
+
+    def optimised_expected_approach(self, *args, **kwargs):
+        """
+        Continuing with expected approach, instead of storing list of
+        strings, store their indices, will reduce AS from O(nm) to O(n)
+
+        TC:
+        AS:
+        """
+        arr = args[0]
+        n = len(arr)
+        hmap = {}
+        for i in range(n):
+            key = self.get_hash_key(arr[i])
+            if hmap.get(key):
+                hmap[key].append(i)
+            else:
+                hmap[key] = [i]
+        res = []
+        for indices in hmap.values():
+            res.append([arr[i] for i in indices])
+
+        return res
 
 
 if __name__ == "__main__":
