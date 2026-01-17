@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
 FIRSTPROBLEM
 
-cat > problem1.py << SECONDPROBLEM
+cat > problem2.py << SECONDPROBLEM
 """
 statement
 
