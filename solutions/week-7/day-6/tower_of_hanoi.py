@@ -13,32 +13,26 @@ Approaches:
 """
 
 
-class Solution:
-    def brute_force(self, *args, **kwargs):
-        """
+def tower_of_hanoi(n, A, C, B):
 
-        TC:
-        AS:
-        """
-        pass
+    # base ?
+    if n <= 0:
+        return 0
+    result = tower_of_hanoi(n-1, A, B, C)
+    result += 1
+    result += tower_of_hanoi(n-1, B, C, A)
 
-    def expected_solution(self, *args, **kwargs):
-        """
-
-        TC:
-        AS:
-        """
-        pass
+    return result
 
 
 if __name__ == "__main__":
-    arrs = [
-        [],
+    Ns = [
+        3, 7
     ]
-    ans = Solution()
-    print("******Brute Force******")
-    for arr in arrs:
-        print(ans.brute_force(arr))
-    print("******Expected******")
-    for arr in arrs:
-        print(ans.expected_solution(arr))
+    A = ""
+    B = ""
+    C = ""
+
+    print("******Recursive******")
+    for n in Ns:
+        print(tower_of_hanoi(n, A, C, B))
