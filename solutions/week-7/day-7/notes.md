@@ -1,46 +1,30 @@
-# Week 7 - Day 6
+# Week 7 - Day 7
 
-Date: January 17, 2026
-Days since start: 55
+Date: January 18, 2026
+Days since start: 56
 
 ## Notes
-
-Recursion:
-Convert non tail recursive to tail recursive if there is scope.
 
 ## Key Problems
 
 ### 1.
-
 ### Statement
-
 ### Key Idea:
 
 ### 1.
-
 ### Statement
-
 ### Key Idea:
 
 ## Practiced Problems
 
-### 1. Find actual subarray sum zero.
-
-### 2. Print 1 to N.
-
-### 3. Print N to 1.
-
-### 4. Factorial of N.
-
-### 5. Tower of Hanoi.
+### 1.
+### 2.
 
 ### Pattern:
-
 -
-
 ## Key Learnings
 
-- Tail recursion, non-tail recursion
+-
 
 ## Time Spent
 
