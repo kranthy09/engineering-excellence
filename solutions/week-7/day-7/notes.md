@@ -8,20 +8,29 @@ Days since start: 56
 ## Key Problems
 
 ### 1.
+
 ### Statement
+
 ### Key Idea:
 
 ### 1.
+
 ### Statement
+
 ### Key Idea:
 
 ## Practiced Problems
 
-### 1.
-### 2.
+### 1. Possible words of digits
+
+### 2. Get combinations with sum
+
+### 3. Rat in maze problem
 
 ### Pattern:
+
 -
+
 ## Key Learnings
 
 -

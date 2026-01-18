@@ -42,4 +42,3 @@ if __name__ == "__main__":
     print("******Expected******")
     for arr in arrs:
         print(ans.expected_solution(arr))
-
