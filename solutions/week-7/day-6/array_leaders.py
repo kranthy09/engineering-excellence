@@ -15,11 +15,40 @@ Approaches:
 
 
 class Solution:
+
+    def brute_force(self, arr):
+        """
+        At i, check if the arr[i] is largest
+        from its right by traversing array from
+        i to n-1 and store it in auxilary array
+
+        TC:
+        AS:
+        """
+        arr = arr.copy()
+        n = len(arr)
+        res = []
+        for i in range(n-1):
+            leader = True
+            for j in range(i+1, n-1):
+                if arr[i] < arr[j]:
+                    leader = False
+                    break
+            if leader:
+                res.append(arr[i])
+        res.append(arr[-1])  # last element is always a leader
+        return res
+
     def leaders(self, arr):
-        # code here
+        """
+        Using Two pointers, watch from end of the array,
+        see leaders and swap with next leaders position.
+
+        TC: O(n)
+        AS: O(1)
+        """
         n = len(arr)
         i = n-1
-        mx = arr[i]
         for j in range(n-2, -1, -1):
             if arr[j] < arr[i]:
                 continue
@@ -32,4 +61,5 @@ class Solution:
 if __name__ == "__main__":
     arr = [10, 4, 2, 4, 1]
     ans = Solution()
+    print(ans.brute_force(arr))
     print(ans.leaders(arr))
