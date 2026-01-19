@@ -99,17 +99,17 @@ class Solution:
         TC: O(N)
         AS: O(1)
         """
-        for i in range(len(arr)):
+        n = len(arr)
+        for i in range(n):
             if arr[i] < 0:
-                arr[i] = len(arr)+1
+                arr[i] = n+1
         bucket_index = 0
-        for i in range(len(arr)):
-            bucket_index = arr[i]
-            if bucket_index > 0 and bucket_index <= len(arr):
-                if arr[bucket_index-1] > 0:
-                    arr[bucket_index-1] *= -1
+        for i in range(n):
+            bucket_index = abs(arr[i])-1
+            if bucket_index < n and arr[bucket_index] > 0:
+                arr[bucket_index] *= -1
 
-        for i in range(len(arr)):
+        for i in range(n):
             if arr[i] > 0:
                 return i + 1
         return len(arr) + 1
@@ -165,7 +165,7 @@ class Solution:
 
 
 if __name__ == "__main__":
-    arrs = [[1, 2, 3, 4, 5],
+    arrs = [[5, 2, 3, 4, 1],
             [-1, -10, 3, 5, 2, 6],
             ]
     solve = Solution()
