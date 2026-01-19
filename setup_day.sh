@@ -16,7 +16,7 @@ echo "days elapsed $DAYS_ELAPSED"
 WEEK=$((DAYS_ELAPSED / 7))
 DAY=$((DAYS_ELAPSED % 7 + 1))
 
-WORKSPACE="solutions/week-$WEEK/day-$DAY"
+WORKSPACE="solutions/week-$WEEK-[Topic]/day-$DAY-concept"
 
 # Create workspace
 mkdir -p "$WORKSPACE"
@@ -130,19 +130,6 @@ Days since start: $((DAYS_ELAPSED + 1))
 
 ## Notes
 
-## Key Problems
-
-### 1.
-### Statement
-### Key Idea:
-```
-```
-### 1.
-### Statement
-### Key Idea:
-```
-
-```
 ## Practiced Problems
 
 ### 1.
@@ -151,15 +138,14 @@ Days since start: $((DAYS_ELAPSED + 1))
 ### Pattern:
 -
 ## Key Learnings
-
 -
 
 ## Time Spent
 
-- Problem 1:
-- Problem 2:
+- 1:
+- 2:
 
-_note_:\*key-problems: sekarana of striken or must known problems.\*practiced-problems: solved problems in the day.\*problem\_.py: all problems solutions
+
 NOTES
 
 echo "✓ Workspace ready: $WORKSPACE"
