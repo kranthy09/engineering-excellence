@@ -8,9 +8,11 @@ if [[ -n $(git status -s) ]]; then
 
     WEEK=$(date +%U)
     DAY=$(date +%d)
-    DEFAULT_MSG="Week $WEEK Day $DAY progress"
-    # Note: Quote "$1" to handle messages with spaces
-    MESSAGE=${1:-$DEFAULT_MSG}
+    if [ -z "$1" ]; then
+        MESSAGE="Week $(date +%U) Day $(date +%d) progress"
+    else
+        MESSAGE="$*" # Captures everything you type after the script name
+    fi
     git commit -m "$MESSAGE"
     git push
     echo "✓ Changes synced with message: $MESSAGE"
