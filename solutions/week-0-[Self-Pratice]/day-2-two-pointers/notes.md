@@ -27,7 +27,7 @@ n == height.length
 ## Key Learnings
 
 1. Here for each element the pointers moving apart/outward by increasing the width
-2. So there can be two pointers solve by moving inward or outward.
+2. So there can be two pointers, solve by moving inward or outward.
 3. Visualizing this helps to identify the pattern to find the solution in inward pointers moving
    or outwards pointer moving.
 
