@@ -16,7 +16,7 @@ echo "days elapsed $DAYS_ELAPSED"
 WEEK=$((DAYS_ELAPSED / 7))
 DAY=$((DAYS_ELAPSED % 7 + 1))
 
-WORKSPACE="solutions/week-$WEEK-[Topic]/day-$DAY-concept"
+WORKSPACE="solutions/week-$WEEK/day-$DAY-concept"
 
 # Create workspace
 mkdir -p "$WORKSPACE"

@@ -22,11 +22,33 @@ Approaches:
 class Solution:
     def brute_force(self, *args, **kwargs):
         """
+        Generate all possible pairs of buy, sell and
+        return max from it.
+
 
         TC:
         AS:
         """
-        pass
+        arr = args[0]
+        result = 0
+        answer = []
+        return self.buy_sell_recur(0, arr, result, answer)
+
+    def buy_sell_recur(self, i, arr, result, answer):
+        # base case
+        if i > len(arr)-2:
+            answer.append(result)
+            return result
+
+        print(result, answer, i)
+        # include
+        if arr[i] > arr[i+1]:
+            result += (arr[i+1]-arr[i]) + \
+                self.buy_sell_recur(i+1, arr, result, answer)
+        # exclude
+            result -= (arr[i+1] - arr[i])
+        else:
+            result += self.buy_sell_recur(i+1, arr, result, answer)
 
     def expected_solution(self, *args, **kwargs):
         """
@@ -39,7 +61,7 @@ class Solution:
 
 if __name__ == "__main__":
     arrs = [
-        [],
+        [100, 180, 260, 310, 40, 535, 695],
     ]
     ans = Solution()
     print("******Brute Force******")
