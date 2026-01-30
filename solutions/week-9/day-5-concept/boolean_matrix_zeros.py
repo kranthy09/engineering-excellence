@@ -1,5 +1,5 @@
 """
-A Boolean Matrix Question*
+A Boolean Matrix Question
 
 Given a boolean matrix mat where each cell contains either 0 or 1,
 the task is to modify it such that if a matrix cell matrix[i][j] is 0
