@@ -1,13 +1,13 @@
-# Week 8 - Day 3
+# Week 9 - Day 5
 
-Date: January 21, 2026
-Days since start: 59
+Date: January 30, 2026
+Days since start: 68
 
 ## Notes
 
 ## Practiced Problems
 
-### 1.
+### 1. Boolean Matrix zeros
 
 ### 2.
 

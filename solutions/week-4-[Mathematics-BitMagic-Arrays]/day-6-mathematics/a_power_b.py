@@ -1,6 +1,13 @@
 # Find a to the power b
 
 
+def a_power_b(a, b):
+    result = 1
+    for i in range(b):
+        result *= a
+    return result
+
+
 def a_to_power_b(a, b):
     if b == 0:
         return 1
@@ -12,6 +19,7 @@ def a_to_power_b(a, b):
 
 res = a_to_power_b(2, 3)
 print(res)
+print("a_power_b: ", a_power_b(3, 4))
 
 
 # Count digits 1 to N
