@@ -35,16 +35,17 @@ class Solution:
         mat = args[0]
         n = len(mat)  # rows
         m = len(mat[0])  # cols
-        pairs = []
+        row_bucket = [1] * m
+        col_bucket = [1] * n
         for i in range(n):
             for j in range(m):
                 if arr[i][j] == 0:
-                    pairs.append([i, j])
-        for pair in pairs:
-            for inx in range(m):
-                mat[pair[0]][inx] = 0
-            for inx in range(n):
-                mat[inx][pair[1]] = 0
+                    row_bucket[j] = 0
+                    col_bucket[i] = 0
+        for i in range(n):
+            for j in range(m):
+                if row_bucket[j] or col_bucket[i]:
+                    mat[i][j] = 0
         return mat
 
     def expected_solution(self, *args, **kwargs):
