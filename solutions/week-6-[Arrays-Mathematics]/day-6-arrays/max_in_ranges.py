@@ -19,11 +19,14 @@ class Solution:
         for j in range(len(L)):
             freq[L[j]] += 1
             freq[R[j]+1] -= 1
-        for k in range(1, len(freq)):
-            freq[k] = freq[k-1] + freq[k]
-            if freq[i] > freq[result]:
+        result = 0
+        prefix = freq[0]
+        for i in range(1, len(freq)):
+            freq[i] += freq[i-1]
+            if prefix < freq[i]:
                 result = i
-        return i
+                prefix = freq[i]
+        return result
 
 
 if __name__ == "__main__":
