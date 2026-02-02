@@ -1,15 +1,11 @@
 """
-statement
 
-i/o:
-o/p:
 
-i/o:
-o/p:
+i/o: 9 --> 8 --> 7 --> 6 --> 5 --> 3 --> 10 --> None
+o/p: False
 
-Approaches:
-1. Brute Force:
-
+i/o: 1 --> 3 --> 6 --> 5 --> 7 --> 9 --> None
+o/p: False
 """
 
 
@@ -42,4 +38,3 @@ if __name__ == "__main__":
     print("******Expected******")
     for arr in arrs:
         print(ans.expected_solution(arr))
-

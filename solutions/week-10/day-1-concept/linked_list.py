@@ -147,19 +147,31 @@ class LinkedList:
 
     def reverse_linkedlist(self):
         """
-        TC:
-        AS:
+        TC: O(n)
+        AS: O(1)
         """
         print("reverse: ")
         prev = None
         curr = self.head
         while curr is not None:
-            # store the node, instead of direct modification.
+            # preserve forward linking
             temp = curr.next
             curr.next = prev
             prev = curr
             curr = temp
         self.head = prev
+
+    def get_middle(self):
+        """
+        TC:
+        AS:
+        """
+        slow = self.head
+        fast = self.head
+        while (fast is not None and fast.next is not None):
+            slow = slow.next
+            fast = fast.next.next
+        return slow.data
 
 
 if __name__ == "__main__":
@@ -186,3 +198,9 @@ if __name__ == "__main__":
     ll.print_elements()
     ll.reverse_linkedlist()
     ll.print_elements()
+    print("middle: ", ll.get_middle())
+    ll.insert_at_position(3, 15)
+    ll.insert_at_position(3, 25)
+    ll.insert_at_position(3, 45)
+    ll.print_elements()
+    print("middle: ", ll.get_middle())
