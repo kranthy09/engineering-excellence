@@ -36,8 +36,8 @@ class LinkedList:
 
     def is_palindrome(self):
         """
-        TC:
-        AS:
+        TC: O(n)
+        AS: O(n), recursive call stack
         """
         state = {"is_pal": True}
         self.is_palindrome_recr(self.head, state)
@@ -58,7 +58,7 @@ class LinkedList:
 
 
 if __name__ == "__main__":
-    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    arr = [1, 2, 3, 4, 5, 4, 3, 2, 1]
     ll = LinkedList()
     ll.from_list(arr)
     print(ll.is_palindrome())
