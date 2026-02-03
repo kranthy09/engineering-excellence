@@ -24,6 +24,10 @@ class LinkedList:
         self.head = None
 
     def from_list(self, data_list):
+        """
+        TC: O(n)
+        AS: O(1)
+        """
         if not data_list:
             return None
 
@@ -88,7 +92,7 @@ class LinkedList:
     def brute_force_remove_loop(self):
         """
         TC: O(n)
-        AS: O(1)
+        AS: O(n), hashmap for maintaing nodes
         """
         hmap = {}
         curr = self.head
@@ -112,13 +116,21 @@ class LinkedList:
             slow = slow.next
             fast = fast.next.next
             if slow == fast:
-                head = self.head
-                curr = slow
-                while head.next != curr.next:
-                    curr = curr.next
-                    head = head.next
-                curr.next = None
-        self.print_elements(self.head)
+                break
+        if slow != fast:
+            return
+        # meeting at the head node
+        if slow == self.head:
+            while slow.next != self.head:
+                slow = slow.next
+            slow.next = None
+            return
+
+        slow = self.head
+        while slow.next != fast.next:
+            slow = slow.next
+            fast = fast.next
+        fast.next = None
 
 
 if __name__ == "__main__":
