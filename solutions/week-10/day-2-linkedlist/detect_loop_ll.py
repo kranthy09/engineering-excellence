@@ -3,7 +3,7 @@ Detect and remove loop in Circular linkedlist
 - Floyd's Cycle Detection Algorithm
 
 i/o: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 8 -> 9
-               \---<--------------------|
+               |---<--------------------|
 o/p: True
 
 Approaches:
