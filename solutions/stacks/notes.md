@@ -3,7 +3,7 @@
 Date: February 08, 2026
 Days since start: 77
 
-## Notes
+# Notes
 
 Doublly Linkedlist Problem: Remove Duplicates in doubly linkedlist.
 
@@ -25,6 +25,8 @@ We can implement stack with array or linked list.
 With array:
 
 ```
+
+
 class Stack:
     def __init__(self):
         self.arr = []
@@ -43,20 +45,28 @@ class Stack:
 
     def size(self):
         return self.size_
+
     def is_empty(self):
         return self.size_ <= 0
+
+
 ```
 
 Implement stack using LinkedList
 
 ```
+
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
+
+
 class LinkedList:
     def __init__(self):
         self.head = head
+
 
 class Stack:
     def __init__(self):
@@ -68,27 +78,28 @@ class Stack:
         data_node.next = self.head
         self.head = data_node
 
+
 ```
 
 Problem solving on Stacks:
 
 1. Check if the paranthesis are in order.
 
-## Practiced Problems
+# Practiced Problems
 
-### 1. Remove Duplicates in doubly linkedlist.
+# 1. Remove Duplicates in doubly linkedlist.
 
-### 2. Check if the paranthesis are in order.
+# 2. Check if the paranthesis are in order.
 
-### Pattern:
-
--
-
-## Key Learnings
+# Pattern:
 
 -
 
-## Time Spent
+# Key Learnings
+
+-
+
+# Time Spent
 
 - 1:
 - 2:
