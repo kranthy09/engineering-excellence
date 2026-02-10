@@ -17,7 +17,7 @@ Output: [[0, 0, 0],
 
 Approaches:
 1. Brute Force: find pairs of i, j at zero, to mark their rows, cols to zero
-2. Bucketing Technique:
+2. Bucketing Technique: Use 0th row and 0th col as buckets
 """
 
 import copy
