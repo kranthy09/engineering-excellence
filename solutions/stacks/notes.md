@@ -24,7 +24,7 @@ Stack is not a primitive data structure, it can implemented.
 We can implement stack with array or linked list.
 With array:
 
-```
+```python
 
 
 class Stack:
@@ -54,7 +54,7 @@ class Stack:
 
 Implement stack using LinkedList
 
-```
+```python
 
 
 class Node:
@@ -90,16 +90,3 @@ Problem solving on Stacks:
 # 1. Remove Duplicates in doubly linkedlist.
 
 # 2. Check if the paranthesis are in order.
-
-# Pattern:
-
--
-
-# Key Learnings
-
--
-
-# Time Spent
-
-- 1:
-- 2:
