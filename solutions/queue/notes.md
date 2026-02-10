@@ -11,14 +11,15 @@ It works with the rule, First In First Out(FIFO).
 
 #### Operations on Queue:
 
-<b>Enqueue</b>: Insert element at the end of the queue
-<b>Dequeue</b>: Remove element from the front of the queue
-<b>Peek</b>: Get the front element of the queue without removing it.
-<b>Size</b>: Get the number of elements in the queue.
-<b>IsEmpty</b>: Check if the queue is empty.
-<b>IsFull</b>: Check if the queue is full (applicable for fixed-size queues).
-<b>getRear</b>: Get the rear element of the queue without removing it.
-<b>getFront</b>: Get the front element of the queue without removing it.
+- _Enqueue_: Insert element at the end of the queue
+
+- _Dequeue_: Remove element from the front of the queue
+- _Peek_: Get the front element of the queue without removing it.
+- _Size_: Get the number of elements in the queue.
+- _IsEmpty_: Check if the queue is empty.
+- _IsFull_: Check if the queue is full (applicable for fixed-size queues).
+- _getRear_: Get the rear element of the queue without removing it.
+- _getFront_: Get the front element of the queue without removing it.
 
 Queues can be implemented using arrays or linked lists. In an array-based implementation, we can use a circular array to efficiently utilize space. In a linked list-based implementation, we can maintain pointers to the front and rear of the queue for efficient enqueue and dequeue operations.
 
