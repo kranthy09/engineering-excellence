@@ -27,10 +27,11 @@ class Queue:
         if self._size == 0:
             return "Empty queue"
         if self._size == 1:
+            self._size -= 1
             return self.arr.pop()
         res = self.arr[0]
 
-        for i in range(self.cap - 1):
+        for i in range(self._size - 1):
             self.arr[i] = self.arr[i+1]
         self.arr = self.arr[:-1]
         self._size -= 1
