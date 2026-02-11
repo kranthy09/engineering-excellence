@@ -2,7 +2,11 @@
 Implementing Circular Queue using Array
 Efficient implementation of Queue using Array
 
-Time Complexity: O(1) for enque and deque
+ Why circular?
+    - Reuses space by wrapping around
+    - Dequeue is O(1), just move front pointer
+    - No shifting elements
+    - Front and rear pointers track elements
 """
 
 from typing import TypeVar, Generic, Optional, List
@@ -14,12 +18,6 @@ T = TypeVar('T')  # Generic type variable
 class CircularQueue(Generic[T]):
     """
     Circular Queue using array indexing
-
-    Why circular?
-    - Reuses space by wrapping around
-    - Dequeue is O(1), just move front pointer
-    - No shifting elements
-    - Front and rear pointers track elements
     """
 
     def __init__(self, capacity: int):
