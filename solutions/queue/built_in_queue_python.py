@@ -49,9 +49,9 @@ class Node(Generic[T]):
         self.next: Optional[Node[T]] = None
 
 
-class DequeDLL(Generic[T]):
+class QueueFromDLL(Generic[T]):
     """
-    Deque implementation using doubly linked list
+    Queue implementation using doubly linked list
 
     - front: pointer to the front node
     - rear: pointer to the rear node
@@ -155,7 +155,7 @@ class DequeDLL(Generic[T]):
 
 
 if __name__ == "__main__":
-    d = DequeDLL[int](5)
+    d = QueueFromDLL[int](5)
     d.enque(1)
     d.enque(2)
     d.enque(3)
