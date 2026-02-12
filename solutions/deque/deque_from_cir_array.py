@@ -49,7 +49,7 @@ class DequeCircularArray:
         if self._size == 0:
             self.front = self.rear = 0
         else:
-            self.front = (self.front - 1) % self.cap
+            self.front = (self.front + self.cap - 1) % self.cap
         self.arr[self.front] = x
         self._size += 1
 
@@ -94,7 +94,7 @@ class DequeCircularArray:
         if self._size == 1:
             self.front = self.rear = -1
         else:
-            self.rear = (self.rear - 1) % self.cap
+            self.rear = (self.rear + self.cap - 1) % self.cap
             self._size -= 1
 
         return val
