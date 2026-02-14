@@ -66,7 +66,14 @@ class Solution:
         so that the front element is always, first non repeating
 
         TC: O(n)
-        AS: O(n), for maintaining queue
+        Having two nested loops seems order of n square, over all
+        n amount of iterations, inner while loop will be executed
+        in O(n), as each character is poped only once per iteration.
+        AS: O(1)
+        Maintianing the queue and frequency map seems to be having
+        auxiliary space of order of n, since only the unique characters
+        are maintained in the queue and there are only 26 lower case
+        alphabets, making O(1).
         """
         from collections import deque
 
