@@ -1,5 +1,4 @@
 .claude
 resume-handler/
 .claude_code
-set_day.sh
-sync_git.sh
+utils/
