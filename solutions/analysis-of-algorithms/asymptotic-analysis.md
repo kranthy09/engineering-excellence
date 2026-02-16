@@ -269,9 +269,11 @@ Asymptotic Notations:
 
 - Theta(exact), Omega(atleast), Big O(atmost)
 
-Upper Bound: Intha kanna slow ga run avvadu, input size entha unna
-Lower Bound: Intha kanna fast runtime algo ledu
-Tight Bound: Average of all types of input sizes and data types distribution for all cases.
+**Upper Bound**: Intha kanna slow ga run avvadu, input size entha unna
+
+**Lower Bound**: Intha kanna fast runtime algo ledu
+
+**Tight Bound**: Average of all types of input sizes and data types distribution for all cases.
 
 Tight Bound is between Lower and Upper bound.
 

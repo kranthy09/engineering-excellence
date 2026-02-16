@@ -12,8 +12,8 @@ class Solution:
         """
         """
         prefixProd = [0] * len(arr)
-        suffixProd = [0] * len(arr)
-        ans = [0] * len(arr)
+        suffixProd = [0] * len(arr)  # noqa
+        ans = [0] * len(arr)  # noqa
         prefixProd[0] = 1
         for i in range(1, len(arr)):
             prefixProd[i] = prefixProd[i-1] * arr[i-1]
