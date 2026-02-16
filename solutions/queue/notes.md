@@ -1,10 +1,3 @@
-# Week 11 - Day 2
-
-Date: February 10, 2026
-Days since start: 79
-
-## Notes
-
 ### Queue Data Structure
 
 It works with the rule, First In First Out(FIFO).
@@ -37,8 +30,6 @@ Queues can be implemented using arrays or linked lists. In an array-based implem
 - Priority Queue: A priority queue is a special type of queue where each element is associated with a priority. Elements with higher priority are dequeued before those with lower priority, regardless of their order in the queue.
 - Doubly ended priority queue: A double-ended priority queue is a data structure that allows for the insertion and deletion of elements based on their priority, similar to a priority queue. However, it also allows for the retrieval of both the highest and lowest priority elements efficiently. This can be useful in scenarios where you need to manage tasks or resources with varying levels of importance.
 
-## Practiced Problems
-
 ### 1. Implement a queue using array
 
 ### 2. Implement a queue using circular array
@@ -51,8 +42,3 @@ Queues can be implemented using arrays or linked lists. In an array-based implem
 
 - Understanding the significance of modulo operation in circular queue to maintain elements in cirucular manner.
 - Recognizing the advantages of circular queues in terms of space efficiency compared to linear queues.
-
-## Time Spent
-
-- 1: Implement a queue using array - 20 mins
-- 2: Implement a queue using circular array - 30 mins

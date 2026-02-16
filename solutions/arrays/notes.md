@@ -1,10 +1,3 @@
-<!-- Source: week-1-[Self-Pratice]/day-2-arrays -->
-
-# Week 1 - Day 2
-
-Date: December 02, 2025
-Days since start: 9
-
 ## Problem 1
 
 ### Subarray Product Less Than K (Medium)
@@ -77,22 +70,7 @@ Same as the longest unique subarray, in which the condition is applied when the 
 - To find the min length of the subarray, have to add only when the sum is >=k which will be in while loop, as every time we find >=k we must find the min length and move left pointer forward by removing left value from the overall sum.
 - Recognise know two pointer pattern after reading question itself.
 
-## Time Spent
-
-- Problem 1: 1h
-- Problem 2: 1h
-
-
----
-
-<!-- Source: week-1-[Self-Pratice]/day-3-arrays -->
-
-# Week 1 - Day 3
-
-Date: December 03, 2025
-Days since start: 10
-
-## Problem 1
+## Problem 3
 
 1. Boats to Save People (Medium)
    You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at the same time, provided the sum of the weight of those people is at most limit.
@@ -131,7 +109,7 @@ else:
 - Order in array elements can help find the pairs efficiently.
 - Used "which choices to make" thinking from recursion solving techniques.
 
-## Problem 2
+## Problem 4
 
 Find K Closest Elements (Medium)
 
@@ -180,203 +158,33 @@ if x < arr[0]:
 - Identification of pattern with two pointers to calculate the local minimum in the region.
 - deducing to max window size of pattern of length k is the constraint, i.e., left and right cannot shrink less k size.
 
-## Time Spent
-
-- Problem 1: 1h
-- Problem 2: 1h 45m
-
-
----
-
-<!-- Source: week-6-[Arrays-Mathematics]/day-5-arrays -->
-
-# Week 6 - Day 5
-
-Date: January 09, 2026
-Days since start: 47
-
-## Notes
+**Notes**
 
 When there is a search in the problem, we have can have linear search, binary search, and hashmap as common methods to solve the problem. Smallest positive number can be solved in those three ways and fourth way is bucketing technique, every time we search for the smallest missing positive number.
 
-## Key Problems
-
-### 1. Smallest positive missing number.
+### problem 5. Smallest positive missing number.
 
 You are given an array of []N integers including zero, The task is to find the smallest missing positive number in the array.
 
-### 2. Boolean matrix Question.
+### problem 6. Boolean matrix Question.
 
-### Statement
+Given a boolean matrix mat where each cell contains either 0 or 1,
+the task is to modify it such that if a matrix cell matrix[i][j] is 0
+then all the cells in its ith row and jth column will become 0.
 
-### Key Idea:
+### problem 7. kadane's
 
-### 1.
+Given an integer of numbers, find contigous subarray with maximum sum.
 
-### Statement
-
-### Key Idea:
-
-## Practiced Problems
-
-### 1.
-
-### 2.
-
-### Pattern:
-
--
-
-## Key Learnings
-
--
-
-## Time Spent
-
-- Problem 1:
-- Problem 2:
-
-_note_:\*key-problems: sekarana of striken or must known problems.\*practiced-problems: solved problems in the day.\*problem\_.py: all problems solutions
-
-
----
-
-<!-- Source: week-6-[Arrays-Mathematics]/day-6-arrays -->
-
-## Kadane
-
-### Given an integer of numbers, find contigous subarray with maximum sum.
-
-Prefix sum technique:
-
-
----
-
-<!-- Source: week-6-[Arrays-Mathematics]/day-7-arrays -->
-
-# Week 6 - Day 7
-
-Date: January 11, 2026
-Days since start: 49
-
-## Notes
-
-## Key Problems
-
-### 1. 
-### Statement
-### Key Idea:
-
-### 1.
-### Statement
-### Key Idea:
-
-## Practiced Problems
-
-### 1.
-### 2.
-
-### Pattern:
--
-## Key Learnings
-
--
-
-## Time Spent
-
-- Problem 1:
-- Problem 2:
-
-_note_:\*key-problems: sekarana of striken or must known problems.\*practiced-problems: solved problems in the day.\*problem\_.py: all problems solutions
-
-
----
-
-<!-- Source: week-7-[Arrays-Recursion]/day-4-arrays -->
-
-# Week 7 - Day 4
-
-Date: January 15, 2026
-Days since start: 53
-
-## Notes
-
-## Key Problems
-
-### 1.
-
-### Statement
-
-### Key Idea:
-
-### 1.
-
-### Statement
-
-### Key Idea:
-
-## Practiced Problems
-
-### 1. Maximum Index
+### problem 8. Maximum Index
 
 Given an array arr of positive integers. You have to return the
 maximum of j - i such that arr[i] < arr[j] and i < j.
 
-### 2.
-
-### Pattern:
-
--
-
-## Key Learnings
-
--
-
-## Time Spent
-
-- Problem 1:
-- Problem 2:
-
-_note_:\*key-problems: sekarana of striken or must known problems.\*practiced-problems: solved problems in the day.\*problem\_.py: all problems solutions
-
-
----
-
-<!-- Source: week-7-[Arrays-Recursion]/day-5-arrays -->
-
-# Week 7 - Day 5
-
-Date: January 16, 2026
-Days since start: 54
-
-## Notes
-
-## Key Problems
-
-### 1.
-
-### Statement
-
-### Key Idea:
-
-### 1.
-
-### Statement
-
-### Key Idea:
-
-## Practiced Problems
-
-### 1. Check if array is sorted and rotated
+### problem 9. Check if array is sorted and rotated
 
 Given an array arr[] of positive and distinct integers, determine if it is sorted (either in increasing or decreasing order) and then rotated at least once in the counter-clockwise direction.
 Note: A sorted array (in increasing or decreasing order) is not considered a sorted and rotated array
-
-### 2.
-
-### Pattern:
-
--
 
 ## Key Learnings
 
@@ -384,123 +192,10 @@ Note: A sorted array (in increasing or decreasing order) is not considered a sor
   For non decreasing array, it is rotated by clock or counterclock wise direction, the larger elements will come front, such that there exists a pivot at which current element is greater than next element
   For non increasing array, there will be one inversion at the pivot.
 
-## Time Spent
-
-- Problem 1:
-- Problem 2:
-
-_note_:\*key-problems: sekarana of striken or must known problems.\*practiced-problems: solved problems in the day.\*problem\_.py: all problems solutions
-
-
----
-
-<!-- Source: week-7-[Arrays-Recursion]/day-6-arrays -->
-
-# Week 7 - Day 6
-
-Date: January 17, 2026
-Days since start: 55
-
-## Notes
-
+**Short Notes**:
 Recursion:
 Convert non tail recursive to tail recursive if there is scope.
 
-## Key Problems
-
-### 1.
-
-### Statement
-
-### Key Idea:
-
-### 1.
-
-### Statement
-
-### Key Idea:
-
-## Practiced Problems
-
-### 1. Find actual subarray sum zero.
-
-### 2. Print 1 to N.
-
-### 3. Print N to 1.
-
-### 4. Factorial of N.
-
-### 5. Tower of Hanoi.
-
-### Pattern:
-
--
-
-## Key Learnings
+Key Learnings:
 
 - Tail recursion, non-tail recursion
-
-## Time Spent
-
-- Problem 1:
-- Problem 2:
-
-_note_:\*key-problems: sekarana of striken or must known problems.\*practiced-problems: solved problems in the day.\*problem\_.py: all problems solutions
-
-
----
-
-<!-- Source: week-8-[Arrays]/day-2-array -->
-
-# Week 8 - Day 2
-
-Date: January 20, 2026
-Days since start: 58
-
-## Notes
-
-## Practiced Problems
-
-### 1.
-### 2.
-
-### Pattern:
--
-## Key Learnings
--
-
-## Time Spent
-
-- 1:
-- 2:
-
-
----
-
-<!-- Source: week-9-[Arrays]/day-5-arrays -->
-
-# Week 9 - Day 5
-
-Date: January 30, 2026
-Days since start: 68
-
-## Notes
-
-## Practiced Problems
-
-### 1. Boolean Matrix zeros
-
-### 2.
-
-### Pattern:
-
--
-
-## Key Learnings
-
--
-
-## Time Spent
-
-- 1:
-- 2:

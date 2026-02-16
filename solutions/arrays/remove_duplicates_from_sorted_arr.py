@@ -40,8 +40,8 @@ class Solution:
 
     def expected_approach(self, arr):
         """
-        TC:
-        SC:
+        TC: O(n)
+        SC: O(n)
         """
         # responsible for telling the position of unique element
         unique_pos = 1

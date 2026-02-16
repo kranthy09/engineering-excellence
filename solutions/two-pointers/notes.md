@@ -1,7 +1,3 @@
-<!-- Source: week-0-[Self-Pratice]/day-1-two-pointers -->
-
-# Week 0 - Day 1 (Total: Day 1)
-
 ## Problems
 
 1: Container With Most Water (Medium)
@@ -36,20 +32,6 @@ Thinking/Approach towards two pointers:
 3. When to stop?
    if left is greater than right.
 
--
-
-## Time Spent
-
-- Problem 1: 1h 30m
-- Problem 2:
-
-
----
-
-<!-- Source: week-0-[Self-Pratice]/day-2-two-pointers -->
-
-# Week 0 - Day 2 (Total: Day 2)
-
 ## Problems
 
 1.: Trapping Rain Water (Hard)
@@ -81,22 +63,7 @@ n == height.length
 3. Visualizing this helps to identify the pattern to find the solution in inward pointers moving
    or outwards pointer moving.
 
--
-
-## Time Spent
-
-- Problem 1: 2 hrs
-- Problem 2:
-
-
 ---
-
-<!-- Source: week-0-[Self-Pratice]/day-3-two-pointers -->
-
-# Week 0 - Day 3
-
-Date: November 27, 2025
-Days since start: 3
 
 ## Problems
 
@@ -131,20 +98,6 @@ Key Challenge: Modify in-place with O(1) space. 2.
 1. Pointers move according to a particular condition such that they transform the logic in to solution.
 2. Two pointers, namely one is slow and other fast. slow pointer has its own condition to move but slowly, and fast pointer has its own condition to move but fastly
 
-## Time Spent
-
-- Problem 1: 2hrs
-- Problem 2:
-
-
----
-
-<!-- Source: week-0-[Self-Pratice]/day-4-two-pointers -->
-
-# Week 0 - Day 4
-
-Date: November 28, 2025
-Days since start: 4
 
 ## Problems
 
@@ -196,20 +149,7 @@ here we donot move current forward, as we have to examine the swapped element, i
 Time Complexity: O(n)
 Space complexity: O(1)
 
-## Time Spent
-
-- Problem 1: 1hr 30mins
-- Problem 2:
-
-
 ---
-
-<!-- Source: week-0-[Self-Pratice]/day-5-two-pointers -->
-
-# Week 0 - Day 5
-
-Date: November 29, 2025
-Days since start: 5
 
 ## Problems
 
@@ -232,20 +172,8 @@ meet unique condition.
 The ability to give a pointer to stop for removing duplicates
 that points to left which is the start of the next substring
 
-## Time Spent
-
-- Problem 1: 1h 30m
-- Problem 2:
-
 
 ---
-
-<!-- Source: week-1-[Self-Pratice]/day-1-two-pointers -->
-
-# Week 1 - Day 1
-
-Date: December 01, 2025
-Days since start: 8
 
 ## Problem
 
@@ -292,20 +220,7 @@ the ksum problem is broken in to fix one element and k-1sum, fix another element
 
 Explore more complexities in the given problem, like 2sum, 3sum, what if i get ksum?, should question ourself after complete solving the problem.
 
-## Time Spent
-
-- Problem 1: 1h
-- Problem 2: 1h
-
-
 ---
-
-<!-- Source: week-1-[Self-Pratice]/day-4-two-pointers -->
-
-# Week 1 - Day 4
-
-Date: December 04, 2025
-Days since start: 11
 
 ## Problem 1
 
@@ -326,21 +241,6 @@ Return the minimum window. If no such window exists, return "".
 ## Key Learnings
 
 - Apply backward pass after find the solution region
-
-## Time Spent
-
-- Problem 1: 2h
-- Problem 2:
-
-
----
-
-<!-- Source: week-2-[Self-Pratice]/day-5 -->
-
-# Week 2 - Day 5
-
-Date: December 12, 2025
-Days since start: 19
 
 ## Problems
 
@@ -380,7 +280,3 @@ Now, to move pointers, if curr_sum is greater than target, move larger integer p
 ## Key Learnings
 
 - Ability to understand the closest distance in terms of abosulte difference and when comparing the values we have to include the all the 3 integers to condition with target for moving which pointer.
-
-## Time Spent
-
-- Problem 1: 1h 30min

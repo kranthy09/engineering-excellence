@@ -1,5 +1,10 @@
 """
 Given an integer of numbers, find contigous subarray with maximum sum
+
+Approaches:
+1. BruteForce: Find all subarrays
+2. Expected: Kadane's algorithm
+3. Prefixsum: Construct prefix sum array
 """
 
 

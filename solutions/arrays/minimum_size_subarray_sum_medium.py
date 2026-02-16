@@ -1,5 +1,6 @@
 """
- Minimum Size Subarray Sum (Medium)
+Minimum Size Subarray Sum (Medium)
+
 Given an array of positive integers nums and a positive integer target,
  return the minimal length of a subarray whose sum is greater than or
  equal to target. If there is no such subarray, return 0 instead.
@@ -12,11 +13,6 @@ length under the problem constraint.
 Example 2:
 Input: target = 4, nums = [1,4,4]
 Output: 1
-Example 3:
-
-Input: target = 11, nums = [1,1,1,1,1,1,1,1]
-Output: 0
-Constraints:
 
 1 ≤ target ≤ 10^9
 1 ≤ nums.length ≤ 10^5
@@ -28,6 +24,14 @@ try coding another solution of which the time complexity is O(n log n).
 
 
 def solve(nums, target):
+    """
+    compute elements sum in each iteration and
+    check with target, shrink using left and right pointers
+    to obtain minimum window length
+
+    TC: O(n)
+    AS: O(1)
+    """
     n = len(nums)
     ele_sum = 0
     left = 0

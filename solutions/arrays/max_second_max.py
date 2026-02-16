@@ -11,8 +11,7 @@ i/o: arr[] = 9 8 7 9 99 8 7 6 7 3 73 48 9 74 84 39 84
 o/p = 99, 84
 
 Approaches:
-
-1. Brute Force:
+1. Expected: find max and 2nd max in one pass
 """
 
 

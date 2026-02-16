@@ -5,21 +5,13 @@ Given an array arr[]. Rotate the array to
 the left (counter-clockwise direction) by
 d steps, where d is a positive integer.
 
-Do the mentioned change in the array in place.
-
-
 i/o: arr[] = [1, 2, 3, 4, 5], d = 2
 o/p: [3, 4, 5, 1, 2]
 
-Approaches:
-1.
 """
-
-# User function Template for python3
 
 
 class Solution:
-    # Function to rotate an array by d elements in counter-clockwise direction.
 
     def brute_force(self, arr, d):
         """

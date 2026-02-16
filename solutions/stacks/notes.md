@@ -1,8 +1,3 @@
-# Week 10 - Day 7
-
-Date: February 08, 2026
-Days since start: 77
-
 # Notes
 
 Doublly Linkedlist Problem: Remove Duplicates in doubly linkedlist.

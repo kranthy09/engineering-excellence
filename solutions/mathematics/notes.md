@@ -1,10 +1,3 @@
-<!-- Source: week-4-[Mathematics-BitMagic-Arrays]/day-6-mathematics -->
-
-# Week 4 - Day 6
-
-Date: December 27, 2025
-Days since start: 34
-
 ## Problems
 
 1. Special Palindrome
@@ -12,29 +5,6 @@ Days since start: 34
 3. Power of a,b
 4. Count of digits
 5. count all digits in n numbers.
-
-## Pattern:
-
-## Key Learnings
-
--
-
-## Time Spent
-
-- Problem 1:
-- Problem 2:
-
-
----
-
-<!-- Source: week-6-[Arrays-Mathematics]/day-4-mathematics -->
-
-# Week 6 - Day 4
-
-Date: January 08, 2026
-Days since start: 46
-
-## Notes
 
 Mathematical - Algorithms
 
@@ -105,7 +75,6 @@ class Solution:
 
 ```
 
-## Practiced Problems
 
 #### 1. Power of Numbers
 
@@ -122,18 +91,9 @@ class Solution:
 - Use Powers in competetive programming in logrithmic time.
 - Reduce large divisions with by early divisions with gcd of two numbers.
 
-## Time Spent
-
-- Problem 1: 2hr
-- Problem 2: 2hr
-- problem 3: 1hr
 
 ### Steps to Concrete Practice
 
 - There are more than 2 methods to solve power of numbers problem, solve them all with explanation written.
 - Combinations have flaws in direct multiplication, explain it with gcd solution one after the other and this problem has more than 4 methods to solve.
 - Multiplication of two strings, needs to be done in O(n\*m), solve in the naive approach instead of self.convert method.
-
-### By doing above concrete steps, today will be done.
-
-_note_:\*key-problems: sekarana of striken or must known problems.\*practiced-problems: solved problems in the day.\*problem\_.py: all problems solutions

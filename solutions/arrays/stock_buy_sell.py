@@ -9,13 +9,6 @@ and we cannot hold multiple stocks on any day.
 
 i/o: arr[] = [100, 180, 260, 310, 40, 535, 695]
 o/p: 865
-
-i/o:
-o/p:
-
-Approaches:
-1. Brute Force:
-
 """
 
 

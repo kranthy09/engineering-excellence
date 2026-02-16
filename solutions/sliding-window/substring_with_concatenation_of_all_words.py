@@ -43,3 +43,52 @@ Constraints
 s and words[i] consist of lowercase English letters
 All strings in words are the same length
 """
+
+from collections import Counter
+
+
+def solve(s, words):
+    """
+    TC: O(m*n)
+    SC: O(n)
+    """
+    word_len = len(words[0])
+    words_count = len(words)
+    words_freq = Counter(words)
+    res = []
+    for offset in range(word_len):
+        left = offset
+        curr_freq = Counter()
+        words_used = 0
+        for right in range(offset, len(s) - word_len + 1, word_len):
+            # construct the word
+            word = s[right: right+word_len]
+            # add word to current window
+            if word in words_freq:  # O(1)
+                curr_freq[word] += 1
+                words_used += 1
+                while curr_freq[word] > words_freq[word]:
+                    left_word = s[left:left+word_len]
+                    curr_freq[left_word] -= 1
+                    words_used -= 1
+                    left += word_len
+                if words_count == words_used:
+                    res.append(left)
+                    # silde window by one word
+                    left_word = s[left:left+word_len]
+                    left += word_len
+                    curr_freq[word] -= 1
+                    words_used -= 1
+            else:
+                # restore window
+                curr_freq.clear()
+                words_used = 0
+                left = right + word_len
+        return res
+
+
+if __name__ == "__main__":
+    s = "barfoothefoobarman"
+    words = ["bar", "foo"]
+    res = solve(s, words)
+    print(res)

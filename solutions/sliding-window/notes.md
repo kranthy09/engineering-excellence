@@ -1,35 +1,4 @@
-<!-- Source: week-2-[Self-Pratice]/day-2 -->
 
-# Week 2 - Day 2
-
-Date: December 09, 2025
-Days since start: 16
-
-## Problems
-
-1. Substring with Concatenation of All Words
-2.
-
-## Pattern:
-
-## Key Learnings
-
--
-
-## Time Spent
-
-- Problem 1:
-- Problem 2:
-
-
----
-
-<!-- Source: week-2-[Self-Pratice]/day-3 -->
-
-# Week 2 - Day 3
-
-Date: December 10, 2025
-Days since start: 17
 
 ## Problems
 
@@ -66,7 +35,3 @@ Words used is equal to word_len then substring is valid, append the left pointer
 If there is no constructed word present in the words freq, now reset to defaults to process for next.
 
 resetting is different from move left word of word_len, in the second case we already have got the answer just want to check whether next word can form valid substring, in first the word entirely not present in words freq so we skip it and reset as fresh.
-
-## Time Spent
-
-- Problem 1: 1h 30min [3 days]

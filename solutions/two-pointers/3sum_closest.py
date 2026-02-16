@@ -20,64 +20,6 @@ target = 1
 Output: 0
 Explanation:
 The only possible sum is 0 (0 + 0 + 0 = 0)
-
-Example 3:
-nums = [1, 1, 1, 0]
-target = -100
-Output: 2
-Explanation:
-The closest sum is 2 (1 + 1 + 0 = 2)
-
-Example 4:
-nums = [-100, -98, -2, -1]
-target = -101
-Output: -101
-Explanation:
-The closest sum is -101 (-100 + -98 + -2 = -200... wait!)
-Actually: -100 + -2 + -1 = -103 (distance 2)
-Or: -100 + -98 + -1 = -199 (distance 98)
-Best: -100 + -2 + 1... wait, there's no 1
-
-Actually with [-100, -98, -2, -1]:
--100 + -98 + -2 = -200 (distance 99)
--100 + -98 + -1 = -199 (distance 98)
--100 + -2 + -1 = -103 (distance 2) ✓
--98 + -2 + -1 = -101 (distance 0) ✓✓✓
-Output: -101
-
-Constraints
-3 <= nums.length <= 500
--1000 <= nums[i] <= 1000
--10^4 <= target <= 10^4
-
-"""
-
-"""
-Psuedo code:
-
-psuedo code:
-
-
-```
-n = len(nums)
-nums.sort()
-min_distance = float("inf")
-for i in range(n):
-l = i+1
-r = n-1
-distance = float("inf")
-while l < r:
-if abs(target - nums[l] - nums[r] - nums[i]) <= distance:
-distance = target - nums[l] - nums[r] - nums[i]
-min_distance_sum = nums[l] + nums[r] + nums[i]
-if target - nums[i] < nums[l] + nums[r]:
-r -= 1
-else:
-l += 1
-
-return min_distance_sum
-
-```
 """
 
 
