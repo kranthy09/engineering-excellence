@@ -20,7 +20,7 @@ Approaches:
 
 def get_unique_subsets(arr):
     """
-
+    Client for unique subsets
     """
     curr = []
     res = []
@@ -34,9 +34,11 @@ def get_unique_subsets_util(i, arr, curr, res):
     """
     take an element and find the subsets,
     skip an element and find the subsets.
+    so for each occurence of an element, either
+    we keep 0 occurences, 1 occurences, 2 occurences..
 
     TC: O(2^n)
-    AS: O(n)
+    AS: O(n), recursive call stack and maintain shared variables.
     """
     # print(curr, i)
     # base case
