@@ -22,7 +22,7 @@ for(i=0; i<n; i++){
 
 **Your Task:** Find the **tight bound** time complexity.
 
-**Answer:**
+**Answer:** O(n*n*length of string)
 
 ---
 
@@ -45,7 +45,7 @@ Sort each string in the array, then sort the strings array in lexicographical or
 
 **Your Task:** Find the overall time complexity.
 
-**Answer:**
+**Answer:** m*n*logn
 
 ---
 
