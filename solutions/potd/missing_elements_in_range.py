@@ -14,6 +14,8 @@ o/p: [13, 14]
 
 Approaches:
 1. Expected: create Hashmap to store existence of array numbers.
+    TC: O(n+range_size)
+    SC: O(n)
 """
 
 
