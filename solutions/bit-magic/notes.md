@@ -1,6 +1,5 @@
 <!-- Source: week-4-[Mathematics-BitMagic-Arrays]/day-7-[BitMagic] -->
 
-
 ## Problems
 
 1. Prime Number
@@ -16,3 +15,5 @@
 ### Bit Magic
 
 Algorithm can scale into two ways, vertiically, the behaviour of solution is defined by following certain steps, or it can scale horizantally, it involves in finding the pattern of progressive nature of the problem inputs. Idea is here when an integer is seen in an part of the algorithm, it can be also be considered as bit representation, which is actual representation of an integer is stored with 32 0's or 1's, also called as 32 bits.
+
+Time complexity for bit operations i constant as it deals with in 32-bits.
