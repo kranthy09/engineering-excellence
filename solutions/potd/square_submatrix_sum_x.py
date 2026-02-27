@@ -25,40 +25,57 @@ class Solution:
 
     def count_squares(self, mat, x):
         """
-        TC:
-        AS:
+        TC: O(n*m*min(n,m))
+        AS: O(n*m), maitaining prefixsums
         """
-
         n = len(mat)
         m = len(mat[0])
 
+        # init prefixsum matrix with 0s
         prefix = [[0]*m for _ in range(n)]
+        # assign first value
         prefix[0][0] = mat[0][0]
+
+        # prefix of first row
         for i in range(1, n):
             prefix[i][0] = prefix[i-1][0] + mat[i][0]
 
+        # prefix of first column
         for j in range(1, m):
             prefix[0][j] = prefix[0][j-1] + mat[0][j]
 
+        # prefix for remaining elements
         for i in range(1, n):
             for j in range(1, m):
                 prefix[i][j] = mat[i][j] + prefix[i-1][j] + \
                     prefix[i][j-1] - prefix[i-1][j-1]
-        # square matrix of length k
+        # maximum length of square submatrix
         sq = min(n, m)
         cnt = 0
+        # for each side length of k
         for k in range(1, sq+1):
             result = 0
+            # find the all square matrices of k length and thier
+            # prefix sums to find the k-length square submatrix sum is X
             for r in range(k-1, n):
                 for c in range(k-1, m):
+
+                    # assign the result, to sum of matrix for all elements
+                    # ending at (r,c)
                     result = prefix[r][c]
+
+                    # top overlapping region sum
                     if r - k >= 0:
                         result -= prefix[r-k][c]
-
+                    # remove left overlapping region sum
                     if c - k >= 0:
                         result -= prefix[r][c-k]
+                    # add the prefix sum of at i-k, j-k
+                    # because two times its removed from overlapping regoins
                     if r - k >= 0 and c - k >= 0:
                         result += prefix[r-k][c-k]
+
+                    # check the square submatrix sum holds condition
                     if result == x:
                         cnt += 1
         return cnt
