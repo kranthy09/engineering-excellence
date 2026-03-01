@@ -58,3 +58,25 @@ A binary tree is complete, when all the levels are filled except the last level 
 A binary tree is perfect, when all the internal nodes have two children and all the leaves nodes are at same level.
 
 [!image]
+
+## Binary Tree Implementation
+
+Binary tree is created with Node containing pointers of left and right children nodes.
+
+To create the nodes at a level use queue data structure to insert the nodes for any node that doesnot children nodes.
+
+```python
+
+```
+
+## Binary Tree Traversal
+
+In Linear data structures we can traverse only in one logical way, either from start, end, or in middle, but in non-linear data structures traversing can happen in different ways.
+
+Generally trees can be traverse in different ways, can be divided in to two major groups, generally used traversals and level order traversals.
+
+So First we discuss about commonly used traversals.
+
+### Preorder Traversal:
+
+A node is processed before processing any of nodes in its subtree.
