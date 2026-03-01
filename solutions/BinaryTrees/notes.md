@@ -80,3 +80,36 @@ So First we discuss about commonly used traversals.
 ### Preorder Traversal:
 
 A node is processed before processing any of nodes in its subtree.
+**Algorithm steps:**
+[Self, Left, Right]
+
+- visit the root.
+- traverse left subtree
+- traverse right subtree
+
+#### Implementation
+
+```python
+
+```
+
+### Postorder Traversal:
+
+A node is processed after processing left subtree, rightsubtree
+**Algorithm steps:**
+[Left, Right, Self]
+
+- Traverse left subtree
+- Traverse right subtree
+- visit root.
+
+### Inorder Traversal:
+
+A node is preocessed after processing all nodes in left subtree and right subtree nodes are processed after processing node itself.
+
+**Algorithm steps:**
+[left, self, right]
+
+- Traverse left subtree
+- visit root
+- Traverse right subtree
