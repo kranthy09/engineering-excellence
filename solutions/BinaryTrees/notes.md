@@ -123,13 +123,30 @@ Given a binary tree, the task is to find the height of the tree. Height of the t
 Recursive calculate the height of left subtree and right subtree of node and assign height to the node as maximum of heights of children + 1.
 
 ```
-"""
 - Recursively calculate the height of subtree
 - if the tree is empty, return 0
 - Take the left subtree, root->left and find its height
 - Take the right subtree, root->right and find its height
 - height of tree = max(height of left subtree, height of right subtree) + 1
-"""
-
 
 ```
+
+## Level Order Traversal
+
+In level order traversal, the binary tree is traversed or nodes are visited starting from root node to last level sequentially.
+
+#### Alogorithm
+
+We need a data structure to get the nodes in level order.
+Initially we take the node and find its left, right. Then we need to append the node so that its left and right are considered. Now these left and right we again have to visit them for thier lefts and rights.
+Consider a queue data structure,
+
+```
+- Push the first element in the queue
+- Now loop, thorugh the q until it becomes empty.
+- on each time, append the current nodes left and right to the queue
+- pop the current top element of the queue and store as result
+- at the end result contians level order traversal of nodes.
+```
+
+
