@@ -113,3 +113,23 @@ A node is preocessed after processing all nodes in left subtree and right subtre
 - Traverse left subtree
 - visit root
 - Traverse right subtree
+
+### Height of Binary Tree
+
+Given a binary tree, the task is to find the height of the tree. Height of the tree is the number of edges in the tree from the root to the deepest node, Height of the empty tree is 0.
+
+#### Algorithm
+
+Recursive calculate the height of left subtree and right subtree of node and assign height to the node as maximum of heights of children + 1.
+
+```
+"""
+- Recursively calculate the height of subtree
+- if the tree is empty, return 0
+- Take the left subtree, root->left and find its height
+- Take the right subtree, root->right and find its height
+- height of tree = max(height of left subtree, height of right subtree) + 1
+"""
+
+
+```
