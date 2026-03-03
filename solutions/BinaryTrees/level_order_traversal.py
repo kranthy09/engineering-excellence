@@ -54,7 +54,8 @@ class Solution:
         q.append(root)
 
         while q:
-            # take the top element from queue, current level node
+            # take the top element from queue,
+            # each node at current level
             node = q.popleft()
 
             # append to current level node to output

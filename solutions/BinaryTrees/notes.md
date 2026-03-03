@@ -33,7 +33,7 @@ A nodes in tree consists of only two childern nodes is said to be binary tree. W
      Applying "log" on both sides
 
      => log(N+1) = (h+1)*log(2)
-     => h + 1 = log(N+1)
+     => h + 1 = log(N+1) # at level zero height is 1, generalised to (h+1)
   ```
 
 ### Types of Binary Tree:
@@ -148,5 +148,3 @@ Consider a queue data structure,
 - pop the current top element of the queue and store as result
 - at the end result contians level order traversal of nodes.
 ```
-
-
