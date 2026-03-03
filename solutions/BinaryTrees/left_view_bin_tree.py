@@ -71,8 +71,8 @@ def left_view_iter(root):
     traversal to capture the results of each levels
     first(top) elements in the queue
 
-    TC:
-    AS:
+    TC: O(n), Visits all nodes once
+    AS: O(n), queue to store nodes at each level
     """
     res: List = []
     # base case
@@ -135,3 +135,4 @@ if __name__ == "__main__":
     print(left_view(root))
     # [1, 2, 4, 7]
     print(left_view_iter(root))
+    # [1, 2, 4, 7]
