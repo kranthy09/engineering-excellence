@@ -27,7 +27,7 @@ Approaches:
 
 
 from typing import List
-# from collections import deque
+from collections import deque
 
 
 class Node:
@@ -49,10 +49,43 @@ def top_view(root: Node) -> List[int]:
 
 def top_view_iter(root):
     """
+    Store the level of nodes in queue with their
+    horizantal distance (HD) as key and data as value
+
     TC:
     AS:
     """
-    pass
+    # base case
+    if root is None:
+        return 0
+
+    q = deque()
+    hmap = {}
+
+    # push root and its hd = 0
+    q.append((root, 0))
+
+    while q:
+
+        node, hd = q.popleft()
+
+        if hd not in hmap:
+            hmap[hd] = node.data
+        if node.left:
+            # send its left along with hd
+            # left subtree node is hd - 1 from root node
+            q.append((node.left, hd - 1))
+        if node.right:
+            # send its right along with hd
+            # right subtree node is hd + 1 from root node
+            q.append((node.right, hd + 1))
+
+    # resultant output
+    res = []
+    for key in sorted(hmap.keys()):
+        res.append(hmap[key])
+
+    return res
 
 
 if __name__ == "__main__":
@@ -72,7 +105,6 @@ if __name__ == "__main__":
     #        \
     #         7
     print(top_view(root))
-    # [1, 3, 6, 7]
-
+    #
     print(top_view_iter(root))
-    # [1, 3, 6, 7]
+    # [4, 2, 1, 3, 6]
