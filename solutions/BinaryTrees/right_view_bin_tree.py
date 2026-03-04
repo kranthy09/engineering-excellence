@@ -81,8 +81,8 @@ def right_view_iter(root):
     traversal to capture the results of each levels
     first(top) elements in the queue
 
-    TC:
-    AS:
+    TC: O(n), visits all nodes at once
+    AS: O(n), for maintaing levels in queue
     """
     res = []
 
@@ -111,12 +111,12 @@ def right_view_iter(root):
             # 'None' delimitter in queue for each row
             while node is not None:
 
-                # if the node has children append in right first
+                # if the node has children append the right first
                 if node.right:
                     q.append(node.right)
 
-                # left later so that queue can maintian right view elements
-                # at the top of it.
+                # and append left later so that queue can maintian
+                # right view elements at the top of it.
                 if node.right:
                     q.append(node.left)
                 # remove the top elements to till obtaining delimitter
