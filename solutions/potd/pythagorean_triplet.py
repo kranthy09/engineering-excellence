@@ -19,7 +19,7 @@ Approaches:
 
 class Solution:
 
-    def expected_solution(self):
+    def pythagroean_triplet(self, arr):
         """
         TC: O(maxx^2)
         AS: O(maxx), storing max of array size boolean values.
@@ -43,12 +43,12 @@ class Solution:
                 if not vis[b]:
                     continue
 
-                    c = int(math.sqrt(a * a + b * b))
+                c = int(math.sqrt(a * a + b * b))
 
-                    if c * c != (a * a + b * b) or c > max_ele:
-                        continue
+                if c * c != (a * a + b * b) or c > max_ele:
+                    continue
 
-                    if vis[c]:
+                if vis[c]:
                     return True
 
         return False
@@ -56,12 +56,9 @@ class Solution:
 
 if __name__ == "__main__":
     arrs = [
-        [],
+        [3, 2, 4, 6, 5],  # True
+        [3, 8, 5],  # False
     ]
     ans = Solution()
-    print("******Brute Force******")
     for arr in arrs:
-        print(ans.brute_force(arr))
-    print("******Expected******")
-    for arr in arrs:
-        print(ans.expected_solution(arr))
+        print(ans.pythagroean_triplet(arr))
